@@ -27,7 +27,7 @@ class Login extends Component {
           <Container fluid>
             <Row>
               <Col size="md-6">
-                <h3>Sign Up</h3>
+                <h3>Login</h3>
                 <form>
                   <Input
                     value={this.state.username}
@@ -44,7 +44,7 @@ class Login extends Component {
                    <FormBtn
                     onClick={this.handleSubmit}
                    >
-                      Submit
+                      <Link to="/profile">Submit</Link>
                     </FormBtn> 
                 </form>
               </Col>
