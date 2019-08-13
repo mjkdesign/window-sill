@@ -1,0 +1,29 @@
+.homeContainer {
+    width: 100%;
+    height: 800px;
+    background-image: urL('../../images/landing_1920x1080_dark.jpg');
+    color: white; 
+
+}
+
+.homeContainer > h2 {
+    text-align: center;
+    font-size: 75px;
+    padding-top: 16%;
+    font-family: 'Libre Baskerville', serif;
+    margin-top: auto;
+}
+
+.homeContainer > p {
+    text-align: justify;
+    width: 50%;
+    margin-left: 19.5rem;
+    display: block;
+}
+
+.homeContainer > button {
+  display: block;
+  max-width: 300px;
+  margin: auto;
+  color: black;
+}

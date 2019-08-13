@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { Route, Link, Redirect, BrowserRouter as Router, Switch } from 'react-router-dom'
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
+import { Input, TextArea, FormBtn } from "../components/Form";
 import API from "../utils/API";
 import { Input, TextArea, FormBtn } from "../components/Form";
 
@@ -31,7 +32,27 @@ class Profile extends Component {
         water: '' 
       })
       ).catch(err => console.log(err));
-  }
+  };
+
+  handleInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
+
+  handleFormSubmit = event => {
+    event.preventDefault();
+    if (this.state.title && this.state.light && this.state.water) {
+      API.savePlant({
+        title: this.state.title,
+        light: this.state.light,
+        water: this.state.water
+      })
+      .then(res => this.loadPlants())
+      .catch(err => console.log(err));
+    }
+  };
 
     render(){
 
@@ -41,7 +62,10 @@ class Profile extends Component {
           <Container fluid>
             <Row>
               <Col size="md-6">
-              <h1>Available Plants</h1>
+              <p>
+                Welcome back <strong>PlantPants</strong>
+              </p>
+              <h1>My Plants</h1>
               {this.state.plants.length ? (
               <List>
                 {this.state.plants.map(plant => (
@@ -50,6 +74,12 @@ class Profile extends Component {
                       <strong>
                         {plant.title}
                       </strong>
+                      <p>
+                        Light Requirements: {plant.light}
+                      </p>
+                      <p>
+                        Water Schedule: {plant.water}
+                      </p>
                     </Link>
                   </ListItem>
                 ))}
@@ -78,6 +108,11 @@ class Profile extends Component {
                   name="water"
                   placeholder="water requirement"
                 />
+                <FormBtn
+                  onClick={this.handleFormSubmit}
+                >
+                  Add Plant
+                </FormBtn>
               </form>
               </Col>
               <Col size="md-6">
