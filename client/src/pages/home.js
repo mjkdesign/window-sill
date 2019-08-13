@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
 import { Route, Link, Redirect, BrowserRouter as Router, Switch } from 'react-router-dom'
-import { Link as scrollLink, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 import { Col, Row, Container } from "../components/Grid";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import Landing from "../components/Landing";
 import About from "../components/About";
+import Footer from "../components/Footer";
+
 
 
 
@@ -59,6 +60,7 @@ class Homepage extends Component {
                 </div>
               </Col>
             </Row>
+            <Footer />
           </Container>
         );
       }
