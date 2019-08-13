@@ -1,6 +1,6 @@
 .homeContainer {
     width: 100%;
-    height: 800px;
+    height: 750px;
     background-image: urL('../../images/landing_1920x1080_dark.jpg');
     color: white; 
 
@@ -9,7 +9,7 @@
 .homeContainer > h2 {
     text-align: center;
     font-size: 75px;
-    padding-top: 16%;
+    padding-top: 25%;
     font-family: 'Libre Baskerville', serif;
     margin-top: auto;
 }

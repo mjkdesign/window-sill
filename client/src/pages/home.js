@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
 import { Route, Link, Redirect, BrowserRouter as Router, Switch } from 'react-router-dom'
+import { Link as scrollLink, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 import { Col, Row, Container } from "../components/Grid";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import Landing from "../components/Landing";
+import About from "../components/About";
 
 
 
@@ -31,8 +33,10 @@ class Homepage extends Component {
           <Container fluid>
             <Row>
               <Landing></Landing>
+              <About></About>
               <Col size="md-6">
-                <h3>Sign Up</h3>
+                <h3 className="text-center">Sign Up</h3>
+                <div className="">
                 <form>
                   <Input
                     value={this.state.username}
@@ -52,6 +56,7 @@ class Homepage extends Component {
                       Submit
                     </FormBtn> 
                 </form>
+                </div>
               </Col>
             </Row>
           </Container>
