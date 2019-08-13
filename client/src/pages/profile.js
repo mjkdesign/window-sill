@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { Route, Link, Redirect, BrowserRouter as Router, Switch } from 'react-router-dom'
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
+import { Input, TextArea, FormBtn } from "../components/Form";
 import API from "../utils/API";
 
 
@@ -30,6 +31,26 @@ class Profile extends Component {
       })
       ).catch(err => console.log(err));
   }
+
+  handleInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
+
+  handleFormSubmit = event => {
+    event.preventDefault();
+    if (this.state.title && this.state.light && this.state.water) {
+      API.savePlant({
+        title: this.state.title,
+        light: this.state.light,
+        water: this.state.water
+      })
+      .then(res => this.loadPlants())
+      .catch(err => console.log(err));
+    }
+  };
 
     render(){
 
@@ -76,6 +97,11 @@ class Profile extends Component {
                   name="water"
                   placeholder="water requirement"
                 />
+                <FormBtn
+                  onClick={this.handleFormSubmit}
+                >
+                  Add Plant
+                </FormBtn>
               </form>
               </Col>
               <Col size="md-6">
