@@ -26,14 +26,7 @@ class Homepage extends Component {
     console.log('creating a new user: ', this.state.username);
   }
 
-  scrollTo() {
-    scroller.scrollTo('scroll-to-element', {
-      duration: 800,
-      delay: 0,
-      smooth: 'easeOutQuint'
-    })
-  }
- 
+
     render(){
       console.log(this.state);
         return (
@@ -41,6 +34,30 @@ class Homepage extends Component {
             <Row>
               <Landing></Landing>
               <About></About>
+              <Col size="md-6">
+                <h3 className="text-center">Sign Up</h3>
+                <div className="">
+                <form>
+                  <Input
+                    value={this.state.username}
+                    onChange={this.handleChange}
+                    name="username"
+                    placeholder="username"
+                   />
+                   <Input
+                    value={this.state.password}
+                    onChange={this.handleChange}
+                    name="password"
+                    placeholder="password"
+                   />
+                   <FormBtn
+                    onClick={this.handleSubmit}
+                   >
+                      Submit
+                    </FormBtn> 
+                </form>
+                </div>
+              </Col>
             </Row>
           </Container>
         );
