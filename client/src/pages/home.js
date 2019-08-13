@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { Route, Link, Redirect, BrowserRouter as Router, Switch } from 'react-router-dom'
 import { Col, Row, Container } from "../components/Grid";
 import { Input, TextArea, FormBtn } from "../components/Form";
+import Landing from "../components/Landing";
 
 
 
@@ -29,6 +30,7 @@ class Homepage extends Component {
         return (
           <Container fluid>
             <Row>
+              <Landing></Landing>
               <Col size="md-6">
                 <h3>Sign Up</h3>
                 <form>
