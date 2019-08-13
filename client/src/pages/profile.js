@@ -30,7 +30,7 @@ class Profile extends Component {
         water: '' 
       })
       ).catch(err => console.log(err));
-  }
+  };
 
   handleInputChange = event => {
     const { name, value } = event.target;
@@ -60,7 +60,10 @@ class Profile extends Component {
           <Container fluid>
             <Row>
               <Col size="md-6">
-              <h1>Available Plants</h1>
+              <p>
+                Welcome back <strong>PlantPants</strong>
+              </p>
+              <h1>My Plants</h1>
               {this.state.plants.length ? (
               <List>
                 {this.state.plants.map(plant => (
@@ -69,6 +72,12 @@ class Profile extends Component {
                       <strong>
                         {plant.title}
                       </strong>
+                      <p>
+                        Light Requirements: {plant.light}
+                      </p>
+                      <p>
+                        Water Schedule: {plant.water}
+                      </p>
                     </Link>
                   </ListItem>
                 ))}
