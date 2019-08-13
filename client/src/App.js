@@ -5,7 +5,7 @@ import Login from "./pages/login";
 import Profile from "./pages/profile";
 import Nav from "./components/Nav";
 
-
+//full functionality
 function App() {
   return (
     <Router>
