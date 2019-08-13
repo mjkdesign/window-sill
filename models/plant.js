@@ -12,7 +12,7 @@ const PlantSchema = new Schema({
 
     temperature: { type: Number, required: false },
 
-    image: { type: String, required: true },
+    // image: { type: String, required: true },
     date: { type: Date, default: Date.now }
 });
 

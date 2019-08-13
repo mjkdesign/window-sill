@@ -18,19 +18,20 @@ app.use(routes);
 // app.use('/api/plants', proxy({ target: "http://localhost:3001/", changeOrigin: true }));
 
 const db = require("./models");
-const plantSeed = require("./scripts/seedDB")
+// const plantSeed = require("./scripts/seedDB")
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/houseplants")
-  db.Plant.create(plantSeed)
-  .then(function(dbPlant){
-    console.log(dbPlant);
-  })
-  .catch(function(dbPlant) {
-    console.log(err.message);
-});
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/houseplants");
+//   db.Plant.create(plantSeed)
+//   .then(function(dbPlant){
+//     console.log(dbPlant);
+//   })
+//   .catch(function(err) {
+//     console.log(err.message);
+// });
 
 // Start the API server
 app.listen(PORT, function() {
-    console.log(`🌎  ==> API Server now listening on http://localhost/${PORT}`);
+  console.log(PORT);
+    console.log(`API Server now listening on http://localhost/${PORT}`);
 });

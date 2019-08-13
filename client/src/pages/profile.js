@@ -13,19 +13,22 @@ class Profile extends Component {
     title: '',
     light: '',
     water: ''
-
   }
 
-  componentDidMount(){
+  componentDidMount = () => {
     this.loadPlants();
   }
 
   loadPlants = () => {
     API.getPlants()
     .then(res =>
-      this.setState({ plants: res.data, title: '', light: '', water: '' })
-      )
-      .catch(err => console.log(err));
+      this.setState({ 
+        plants: res.data,
+        title: '',
+        light: '',
+        water: '' 
+      })
+      ).catch(err => console.log(err));
   }
 
     render(){
@@ -48,8 +51,9 @@ class Profile extends Component {
                 ))}
               </List>
             ) : (
-              <h3>No Plants :^(</h3>
-            )}
+              <h3>No Plants :^</h3>
+            )
+            }
 
             </Row>
           </Container>
