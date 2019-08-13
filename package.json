@@ -1,0 +1,27 @@
+{
+  "name": "window-sill",
+  "version": "1.0.0",
+  "description": "react-app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "seed": "node scripts/seedDB.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hausuwu/window-sill.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hausuwu/window-sill/issues"
+  },
+  "homepage": "https://github.com/hausuwu/window-sill#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.6.9",
+    "path": "^0.12.7"
+  }
+}
