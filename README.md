@@ -19,3 +19,4 @@ In the package json inside the client folder you will ned the following. The scr
 
 The first thing you do on the landing page is make an account. You make an account by the signup tab on the bottom of the landing page. Once you make an account, you will be taken to the profile page. The profile page will show the list of plants that are in the mongodb database. Below the list is the feature to add a houseplant to the list. To submit a plant to the list, Just type the name, the amount of water it needs, and the amount of light it needs. Then the plant will be added to the list of plants. 
 
+[For our deployed app on Heroku](https://window-sill.herokuapp.com/)
