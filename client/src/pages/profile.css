@@ -1,0 +1,22 @@
+.plantForm{
+    width: 100%;
+    /* margin: 20px 150px; */
+    margin-top: 55%;
+    margin-left: 15px;
+}
+
+.myPlants{
+    text-align: center;
+    margin-top: 15%;
+    padding-bottom: 30px;
+    /* margin-left: 55% */
+}
+
+.addPlant{
+    text-align: center;
+}
+
+.plantPop{
+    text-align: center;
+    padding: 30px;
+}

@@ -12,7 +12,6 @@ class Landing extends Component {
             <div className='homeContainer'>
                 <h2> Welcome to Window Sill</h2>
                     <Col size="m-12"> <p className='d-flex justify-content-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe omnis nostrum obcaecati possimus, libero cupiditate odit rerum eligendi aspernatur delectus</p></Col>
-                <button>Learn More </button>
             </div>
         </Row>
     </Container>

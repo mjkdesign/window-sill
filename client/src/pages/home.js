@@ -3,6 +3,8 @@ import { Route, Link, Redirect, BrowserRouter as Router, Switch } from 'react-ro
 import { Col, Row, Container } from "../components/Grid";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import Landing from "../components/Landing";
+import About from "../components/About";
+import SignUp from "../components/SignForm";
 
 
 
@@ -31,8 +33,10 @@ class Homepage extends Component {
           <Container fluid>
             <Row>
               <Landing></Landing>
-              <Col size="md-6">
-                <h3>Sign Up</h3>
+              <About></About>
+              <SignUp></SignUp>
+              {/* <Col size="md-6"> */}
+                {/* <h3 className="text-center">Sign Up</h3>
                 <form>
                   <Input
                     value={this.state.username}
@@ -51,8 +55,8 @@ class Homepage extends Component {
                    >
                       Submit
                     </FormBtn> 
-                </form>
-              </Col>
+                </form> */}
+              {/* </Col> */}
             </Row>
           </Container>
         );

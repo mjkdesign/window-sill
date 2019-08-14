@@ -4,6 +4,7 @@ import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import API from "../utils/API";
+import "./profile.css"
 
 
 
@@ -60,35 +61,11 @@ class Profile extends Component {
       
         return (
           <Container fluid>
-            <Row>
-              <Col size="md-6">
-              <p>
-                Welcome back <strong>PlantPants</strong>
-              </p>
-              <h1>My Plants</h1>
-              {this.state.plants.length ? (
-              <List>
-                {this.state.plants.map(plant => (
-                  <ListItem key={plant._id}>
-                    <Link to={"/plants" + plant._id}>
-                      <strong>
-                        {plant.title}
-                      </strong>
-                      <p>
-                        Light Requirements: {plant.light}
-                      </p>
-                      <p>
-                        Water Schedule: {plant.water}
-                      </p>
-                    </Link>
-                  </ListItem>
-                ))}
-              </List>
-            ) : (
-              <h3>No Plants :^</h3>
-            )
-            }
-              <h1>Add a Plant</h1>
+            <Row class="row align-items-center">
+            <div class='col-4'>
+            <div className="plantForm">
+              <h1 className="addPlant">Add a Plant</h1>
+              
               <form>
                 <Input 
                   value={this.state.title}
@@ -114,9 +91,40 @@ class Profile extends Component {
                   Add Plant
                 </FormBtn>
               </form>
+              </div>
+            </div>
+              <Col size="md-5" class="justify-content-center">
+              <p>
+                Welcome back <strong>PlantPants</strong>
+              </p>
+
+              <h1 className="myPlants">My Plants</h1>
+              
+              {this.state.plants.length ? (
+              <List>
+                {this.state.plants.map(plant => (
+                  <ListItem key={plant._id}>
+                    <Link to={"/plants" + plant._id}>
+                      <strong>
+                        {plant.title}
+                      </strong>
+                      <p>
+                        Light Requirements: {plant.light}
+                      </p>
+                      <p>
+                        Water Schedule: {plant.water}
+                      </p>
+                    </Link>
+                  </ListItem>
+                ))}
+              </List>
+            ) : (
+              <h3 className="plantPop">No Plants :</h3>
+            )
+            }
+            
               </Col>
-              <Col size="md-6">
-              </Col>
+            
             </Row>
           </Container>
         );

@@ -1,0 +1,49 @@
+.about{
+    padding-top: 100px;
+}
+
+/* .abtMain{
+    background-image: url('../../Images/planthero.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 475px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+    
+} */
+
+.plantHero{
+    min-width: 100%;
+    height: 100px;
+    /* padding-bottom: 20%; */
+    /* background-image: url(../../Images/plant-serum-banner.jpg); */
+    background-size: cover;
+    /* display:flex; */
+}
+
+.abtTitle{
+
+    font-family: 'Libre Baskerville', serif;
+}
+
+.d-inline > p{
+    line-height: 40px;
+}
+
+.abtContainer > h2 {
+    /* margin-top: 60%; */
+}
+
+/* .abtText {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+    
+    border-width: 2px;
+    border-color: black;
+} */
