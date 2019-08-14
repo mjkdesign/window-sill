@@ -17,18 +17,12 @@ app.use(routes);
 
 // app.use('/api/plants', proxy({ target: "http://localhost:3001/", changeOrigin: true }));
 
-const db = require("./models");
+// const db = require("./models");
 // const plantSeed = require("./scripts/seedDB")
 
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/houseplants");
-//   db.Plant.create(plantSeed)
-//   .then(function(dbPlant){
-//     console.log(dbPlant);
-//   })
-//   .catch(function(err) {
-//     console.log(err.message);
-// });
+
 
 app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
