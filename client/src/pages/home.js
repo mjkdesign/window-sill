@@ -4,8 +4,7 @@ import { Col, Row, Container } from "../components/Grid";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import Landing from "../components/Landing";
 import About from "../components/About";
-import Footer from "../components/Footer";
-
+import SignUp from "../components/SignForm";
 
 
 
@@ -35,9 +34,9 @@ class Homepage extends Component {
             <Row>
               <Landing></Landing>
               <About></About>
-              <Col size="md-6">
-                <h3 className="text-center">Sign Up</h3>
-                <div className="">
+              <SignUp></SignUp>
+              {/* <Col size="md-6"> */}
+                {/* <h3 className="text-center">Sign Up</h3>
                 <form>
                   <Input
                     value={this.state.username}
@@ -56,11 +55,9 @@ class Homepage extends Component {
                    >
                       Submit
                     </FormBtn> 
-                </form>
-                </div>
-              </Col>
+                </form> */}
+              {/* </Col> */}
             </Row>
-            <Footer />
           </Container>
         );
       }

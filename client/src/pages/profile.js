@@ -59,6 +59,7 @@ class Profile extends Component {
         return (
           <Container fluid>
             <Row>
+
               <Col size="md-6">
               <p>
                 Welcome back <strong>PlantPants</strong>
@@ -113,8 +114,7 @@ class Profile extends Component {
                 </FormBtn>
               </form>
               </Col>
-              <Col size="md-6">
-              </Col>
+
             </Row>
           </Container>
         );

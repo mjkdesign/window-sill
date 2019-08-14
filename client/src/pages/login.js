@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { Route, Link, Redirect, BrowserRouter as Router, Switch } from 'react-router-dom'
 import { Col, Row, Container } from "../components/Grid";
 import { Input, TextArea, FormBtn } from "../components/Form";
+import "./login.css";
 
 
 class Login extends Component {
@@ -25,10 +26,11 @@ class Login extends Component {
     render(){
         return (
           <Container fluid>
-            <Row>
+            <Row class="row align-items-center">
+            <div className="login">
+            <h3 className="loginWrap">Login</h3>
               <Col size="md-6">
-                <h3>Login</h3>
-                <form>
+                <form className="formInput">
                   <Input
                     value={this.state.username}
                     onChange={this.handleChange}
@@ -48,7 +50,8 @@ class Login extends Component {
                     </FormBtn> 
                 </form>
               </Col>
-            </Row>
+              </div>
+            </Row>  
           </Container>
         );
       }
